@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comp.24_04</title>
+
+    <link rel="stylesheet" href="estilos  2.css">
+    <script src="ik mult.js"></script>
+
+</head>
+
+<body class="afiliacion-page">
+    <div id="div2">
+        <h1><u>AFILIACION DE CLIENTE</u></h1>
+        <form>
+
+            <P><strong>NOMBRE</strong><input type="text" id="nombre" name=" nombre" placeholder="indique su nombre" required> </P>
+
+            <p> <strong>APELLIDO</strong><input type="text" id="apellido" name="nombre" placeholder="indique su pellido" required></p>
+
+            <p><strong>EDAD</strong><input type="number" id="edad" name="edad" placeholder="indique su numero" required></p>
+            <p><strong>N. TELEFONO</strong><input type="number" id="telefono" name="telefono" placeholder="indique su numero" required></p>
+            <p><strong>EMAIL</strong><input type= "email" id="email" name=  "email" placeholder="indique su mail" required></p>
+ 
+            <h1><u>SELECION DE MARCA</u></h1>
+            <p>Marcas disponibles: 
+                <select id="marcas" name="marcas" onchange="actualizarModelos()">
+                    <option value="">Seleccione una marca</option>
+                    <option value="PRS">PRS</option>
+                    <option value="Les Paul">Les Paul (Gibson)</option>
+                    <option value="Ibanez">Ibanez</option>
+                    <option value="Yamaha">Yamaha</option>
+                    <option value="Fender">Fender</option>
+                    <option value="Epiphone">Epiphone</option>
+                    <option value="Squier">Squier</option>
+                </select>
+            </p>
+
+            <h1><u>Modelos</u></h1>
+            <p>Modelos disponibles: <select id="modelos" name="modelos"></select></p>
+            <button type="button" onclick="afiliar()">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

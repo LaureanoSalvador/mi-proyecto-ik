@@ -1,0 +1,81 @@
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+
+.login-page {
+    background-image: url('https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.afiliacion-page {
+    background-image: url('https://images.pexels.com/photos/164821/pexels-photo-164821.jpeg');
+    padding: 20px;
+}
+
+
+.div1, #div2 {
+    background-color: rgba(30, 30, 30, 0.85); 
+    padding: 30px;
+    border-radius: 15px;
+    color: #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.div1 {
+    width: 350px;
+    text-align: center;
+}
+
+#div2 {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+
+h1 {
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #ffcc00;
+    color: #1e1e1e;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #e6b800;
+}
+
+button:active {
+    transform: scale(0.98);
+}
