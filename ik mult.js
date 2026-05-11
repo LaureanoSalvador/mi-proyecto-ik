@@ -58,11 +58,15 @@ function actualizarModelos() {
 function afiliar() {
     var nombre = document.getElementById("nombre").value;
     var apellido = document.getElementById("apellido").value;
+    var edad = document.getElementById("edad").value;
+    var telefono = document.getElementById("telefono").value;
     var email = document.getElementById("email").value;
+    var marca = document.getElementById("marcas").value;
+    var modelo = document.getElementById("modelos").value;
 
-    if (nombre == "" || apellido == "" || email == "") {
-        alert("Por favor, complete todos los campos obligatorios.");
+    if (nombre === "" || apellido === "" || edad === "" || telefono === "" || email === "" || marca === "" || modelo === "" || modelo === "Seleccione un modelo") {
+        alert("⚠️ Todos los campos son obligatorios. Por favor, completa tu información y selecciona una marca y modelo válido.");
         return;
     }
-    alert("Afiliado con éxito con su " + document.getElementById("marcas").value + " " + document.getElementById("modelos").value);
+    alert("¡Felicidades " + nombre + "! Te has afiliado con éxito con tu " + marca + " " + modelo + ".");
 }
