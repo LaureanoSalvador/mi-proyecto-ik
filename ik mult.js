@@ -132,6 +132,73 @@ function cargarConfiguracion() {
     } else {
         agregarOpciones(comboTrastes, ["Estándar (21 Trastes)", "Estándar (22 Trastes)"]);
     }
+
+    // Inicializar marcas basadas en la primera opción cargada
+    actualizarMarcasPuente();
+    actualizarMarcasPastillas();
+    actualizarMarcasClavijero();
+}
+
+function actualizarMarcasPuente() {
+    var tipo = document.getElementById("puente").value;
+    var combo = document.getElementById("marcaPuente");
+    combo.innerHTML = "";
+
+    var marcas = ["Original Fabricante"];
+    
+    if (tipo === "Floyd Rose (Puente Flotante)" || tipo === "Edge Zero") {
+        marcas = ["Floyd Rose", "Gotoh", "Schaller", "Ibanez (Edge)"];
+    } else if (tipo === "Tune-O-Matic (Stopbar)") {
+        marcas = ["Gibson", "TonePros", "Gotoh", "Kluson"];
+    } else if (tipo === "Bigsby Tremolo") {
+        marcas = ["Bigsby"];
+    } else if (tipo === "Tremolo Sincronizado" || tipo.includes("Bridge")) {
+        marcas = ["Fender", "Gotoh", "Wilkinson", "Callaham"];
+    } else if (tipo === "Hardtail (Fijo)") {
+        marcas = ["Hipshot", "Gotoh", "Fender"];
+    }
+
+    agregarOpciones(combo, marcas);
+}
+
+function actualizarMarcasPastillas() {
+    var tipo = document.getElementById("pastillas").value;
+    var combo = document.getElementById("marcaPastillas");
+    combo.innerHTML = "";
+
+    var marcas = [];
+
+    if (tipo === "HH Active") {
+        marcas = ["EMG Pickups", "Fishman (Fluence)", "Seymour Duncan (Blackouts)"];
+    } else if (tipo.includes("SS") || tipo === "SSS (3 Simples)") {
+        marcas = ["Fender", "Seymour Duncan", "DiMarzio", "Lindy Fralin"];
+    } else if (tipo === "P90 / P90") {
+        marcas = ["Gibson", "Seymour Duncan", "Lollar", "Bare Knuckle"];
+    } else if (tipo === "HH (2 Humbuckers)" || tipo === "HSH (Humbucker/Simple/Humbucker)") {
+        marcas = ["Seymour Duncan", "DiMarzio", "Bare Knuckle", "Gibson", "PRS"];
+    } else {
+        marcas = ["Seymour Duncan", "DiMarzio", "EMG"];
+    }
+
+    agregarOpciones(combo, marcas);
+}
+
+function actualizarMarcasClavijero() {
+    var tipo = document.getElementById("clavijero").value;
+    var combo = document.getElementById("marcaClavijero");
+    combo.innerHTML = "";
+
+    var marcas = [];
+
+    if (tipo === "Locking") {
+        marcas = ["Gotoh (Magnum)", "Grover", "Schaller", "Sperzel", "Hipshot"];
+    } else if (tipo === "Vintage") {
+        marcas = ["Kluson", "Gotoh (SD91)", "Fender"];
+    } else {
+        marcas = ["Grover", "Gotoh", "Ping"];
+    }
+
+    agregarOpciones(combo, marcas);
 }
 
 function agregarOpciones(select, opciones) {

@@ -13,21 +13,15 @@
         <form id="form-personalizacion">
             
             <p><strong>Tipo de Puente</strong>
-                <select id="puente" name="puente"></select>
+                <select id="puente" name="puente" onchange="actualizarMarcasPuente()"></select>
             </p>
 
             <p><strong>Marca del Puente</strong>
-                <select id="marcaPuente" name="marcaPuente">
-                    <option value="Original">Original del Fabricante</option>
-                    <option value="Floyd Rose">Floyd Rose</option>
-                    <option value="Gotoh">Gotoh</option>
-                    <option value="Schaller">Schaller</option>
-                    <option value="Evertune">Evertune</option>
-                </select>
+                <select id="marcaPuente" name="marcaPuente"></select>
             </p>
 
             <p><strong>Clavijero (Tuners)</strong>
-                <select id="clavijero" name="clavijero">
+                <select id="clavijero" name="clavijero" onchange="actualizarMarcasClavijero()">
                     <option value="Standard">Estándar Blindado</option>
                     <option value="Locking">Locking Tuners (Bloqueo)</option>
                     <option value="Vintage">Estilo Vintage</option>
@@ -35,13 +29,7 @@
             </p>
 
             <p><strong>Marca del Clavijero</strong>
-                <select id="marcaClavijero" name="marcaClavijero">
-                    <option value="Grover">Grover</option>
-                    <option value="Gotoh">Gotoh</option>
-                    <option value="Schaller">Schaller</option>
-                    <option value="Sperzel">Sperzel</option>
-                    <option value="Hipshot">Hipshot</option>
-                </select>
+                <select id="marcaClavijero" name="marcaClavijero"></select>
             </p>
 
             <p><strong>Diseño de Trastes</strong>
@@ -72,18 +60,11 @@
             <h1><u>Electrónica</u></h1>
 
             <p><strong>Combinación de Pastillas</strong>
-                <select id="pastillas" name="pastillas"></select>
+                <select id="pastillas" name="pastillas" onchange="actualizarMarcasPastillas()"></select>
             </p>
 
             <p><strong>Marca de Pastillas</strong>
-                <select id="marcaPastillas" name="marcaPastillas">
-                    <option value="Seymour Duncan">Seymour Duncan</option>
-                    <option value="DiMarzio">DiMarzio</option>
-                    <option value="EMG">EMG Pickups</option>
-                    <option value="Fishman">Fishman (Fluence)</option>
-                    <option value="Bare Knuckle">Bare Knuckle</option>
-                    <option value="Fender/Gibson">Original Marca</option>
-                </select>
+                <select id="marcaPastillas" name="marcaPastillas"></select>
             </p>
 
             <p><strong>Tipo de Circuito</strong>
