@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración Técnica - IK Multimedia</title>
+    <link rel="stylesheet" href="estilos  2.css">
+    <script src="ik mult.js"></script>
+</head>
+<body class="afiliacion-page" onload="cargarConfiguracion()">
+    <div id="div2">
+        <h1 id="resumen-seleccion">Personalizando tu Guitarra</h1>
+        <form id="form-personalizacion">
+            
+            <p><strong>Tipo de Puente</strong>
+                <select id="puente" name="puente"></select>
+            </p>
+
+            <p><strong>Marca del Puente</strong>
+                <select id="marcaPuente" name="marcaPuente">
+                    <option value="Original">Original del Fabricante</option>
+                    <option value="Floyd Rose">Floyd Rose</option>
+                    <option value="Gotoh">Gotoh</option>
+                    <option value="Schaller">Schaller</option>
+                    <option value="Evertune">Evertune</option>
+                </select>
+            </p>
+
+            <p><strong>Clavijero (Tuners)</strong>
+                <select id="clavijero" name="clavijero">
+                    <option value="Standard">Estándar Blindado</option>
+                    <option value="Locking">Locking Tuners (Bloqueo)</option>
+                    <option value="Vintage">Estilo Vintage</option>
+                </select>
+            </p>
+
+            <p><strong>Marca del Clavijero</strong>
+                <select id="marcaClavijero" name="marcaClavijero">
+                    <option value="Grover">Grover</option>
+                    <option value="Gotoh">Gotoh</option>
+                    <option value="Schaller">Schaller</option>
+                    <option value="Sperzel">Sperzel</option>
+                    <option value="Hipshot">Hipshot</option>
+                </select>
+            </p>
+
+            <p><strong>Diseño de Trastes</strong>
+                <select id="trastes" name="trastes"></select>
+            </p>
+
+            <hr>
+            <h1><u>Materiales</u></h1>
+
+            <p><strong>Madera del Cuerpo</strong>
+                <select id="maderaCuerpo" name="maderaCuerpo">
+                    <option value="Caoba">Caoba (Mahogany)</option>
+                    <option value="Aliso">Aliso (Alder)</option>
+                    <option value="Fresno">Fresno (Ash)</option>
+                    <option value="Tilo">Tilo (Basswood)</option>
+                </select>
+            </p>
+
+            <p><strong>Madera del Mástil</strong>
+                <select id="maderaMastil" name="maderaMastil">
+                    <option value="Membrillo">Arce (Maple)</option>
+                    <option value="Caoba">Caoba</option>
+                    <option value="Palisandro">Palisandro (Rosewood)</option>
+                </select>
+            </p>
+
+            <hr>
+            <h1><u>Electrónica</u></h1>
+
+            <p><strong>Combinación de Pastillas</strong>
+                <select id="pastillas" name="pastillas"></select>
+            </p>
+
+            <p><strong>Marca de Pastillas</strong>
+                <select id="marcaPastillas" name="marcaPastillas">
+                    <option value="Seymour Duncan">Seymour Duncan</option>
+                    <option value="DiMarzio">DiMarzio</option>
+                    <option value="EMG">EMG Pickups</option>
+                    <option value="Fishman">Fishman (Fluence)</option>
+                    <option value="Bare Knuckle">Bare Knuckle</option>
+                    <option value="Fender/Gibson">Original Marca</option>
+                </select>
+            </p>
+
+            <p><strong>Tipo de Circuito</strong>
+                <select id="circuito" name="circuito"></select>
+            </p>
+
+            <button type="button" onclick="finalizarPersonalizacion()">Confirmar Especificaciones</button>
+            <br><br>
+            <button type="button" style="background-color: #555; color: white;" onclick="window.location.href='afiliacion de IK.html'">Volver</button>
+        </form>
+    </div>
+
+    <style>
+        hr {
+            border: 0;
+            border-top: 1px solid #ffcc00;
+            margin: 20px 0;
+            opacity: 0.3;
+        }
+    </style>
+</body>
+</html>
