@@ -1,51 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comp.24_04</title>
-
+    <title>Afiliación de Instrumento - IK Multimedia</title>
     <link rel="stylesheet" href="estilos  2.css">
     <script src="ik mult.js"></script>
-
 </head>
-
 <body class="afiliacion-page">
     <div id="div2">
-        <h1><u>AFILIACION DE CLIENTE</u></h1>
-        <form>
+        <h1>Registro de Instrumento</h1>
+        <form id="form-afiliacion">
+            <p><strong>Nombre</strong>
+                <input type="text" id="nombre" placeholder="Tu nombre">
+            </p>
+            <p><strong>Apellido</strong>
+                <input type="text" id="apellido" placeholder="Tu apellido">
+            </p>
+            <p><strong>Edad</strong>
+                <input type="number" id="edad" placeholder="Tu edad">
+            </p>
+            <p><strong>Teléfono</strong>
+                <input type="tel" id="telefono" placeholder="Ej: +57 300...">
+            </p>
+            <p><strong>Correo Electrónico</strong>
+                <input type="email" id="email" placeholder="correo@ejemplo.com">
+            </p>
 
-            <P><strong>NOMBRE</strong><input type="text" id="nombre" name=" nombre" placeholder="indique su nombre" required> </P>
+            <hr>
+            <h1><u>Selección de Base</u></h1>
 
-            <p> <strong>APELLIDO</strong><input type="text" id="apellido" name="nombre" placeholder="indique su pellido" required></p>
-
-            <p><strong>EDAD</strong><input type="number" id="edad" name="edad" placeholder="indique su numero" required></p>
-            <p><strong>N. TELEFONO</strong><input type="number" id="telefono" name="telefono" placeholder="indique su numero" required></p>
-            <p><strong>EMAIL</strong><input type= "email" id="email" name=  "email" placeholder="indique su mail" required></p>
- 
-            <h1><u>SELECION DE MARCA</u></h1>
-            <p>Marcas disponibles: 
-                <select id="marcas" name="marcas" onchange="actualizarModelos()">
+            <p><strong>Marca</strong>
+                <select id="marcas" onchange="actualizarModelos()">
                     <option value="">Seleccione una marca</option>
-                    <option value="PRS">PRS</option>
-                    <option value="Les Paul">Les Paul (Gibson)</option>
-                    <option value="Ibanez">Ibanez</option>
-                    <option value="Yamaha">Yamaha</option>
                     <option value="Fender">Fender</option>
-                    <option value="Epiphone">Epiphone</option>
                     <option value="Squier">Squier</option>
+                    <option value="Les Paul">Gibson / Les Paul</option>
+                    <option value="Epiphone">Epiphone</option>
+                    <option value="Ibanez">Ibanez</option>
+                    <option value="PRS">PRS</option>
+                    <option value="Yamaha">Yamaha</option>
                 </select>
             </p>
 
-            <h1><u>Modelos</u></h1>
-            <p>Modelos disponibles: 
-                <select id="modelos" name="modelos">
-                    <option value="">Seleccione una marca primero</option>
+            <p><strong>Modelo / Tipo de Cuerpo</strong>
+                <select id="modelos">
+                    <option value="">Seleccione un modelo</option>
                 </select>
             </p>
-            <button type="button" onclick="afiliar()">Enviar</button>
+
+            <button type="button" onclick="afiliar()">Siguiente: Personalizar Especificaciones</button>
         </form>
     </div>
+
+    <style>
+        hr {
+            border: 0;
+            border-top: 1px solid #ffcc00;
+            margin: 20px 0;
+            opacity: 0.3;
+        }
+    </style>
 </body>
 </html>
